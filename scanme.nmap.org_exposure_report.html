@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Exposure Assessment Report</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .high { color: red; }
+        .medium { color: orange; }
+        .low { color: green; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+    </style>
+</head>
+<body>
+<h1>Exposure & Attack Surface Report</h1>
+
+<p><b>Target:</b> scanme.nmap.org</p>
+<p><b>Date:</b> 2026-01-31 12:20:35.038407</p>
+
+<h2>Discovered Services</h2>
+
+<h3>scanme.nmap.org</h3>
+<ul>
+
+<li>22/tcp ssh OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 Ubuntu Linux; protocol 2.0</li>
+
+<li>80/tcp http Apache httpd 2.4.7 (Ubuntu)</li>
+
+<li>9929/tcp nping-echo Nping echo</li>
+
+<li>31337/tcp tcpwrapped</li>
+
+</ul>
+
+
+<h2>Risk Summary</h2>
+<table>
+<tr><th>Host</th><th>Risk</th><th>Score</th><th>Reasons</th></tr>
+
+<tr>
+<td>scanme.nmap.org</td>
+<td class="low">Low</td>
+<td>3</td>
+<td>HTTP service exposed (web attack surface), SSH service exposed (remote access)</td>
+</tr>
+
+</table>
+
+<h2>Change Detection</h2>
+<pre>{'new_hosts': [], 'removed_hosts': [], 'new_services': {'scanme.nmap.org': ['9929/tcp nping-echo Nping echo', '80/tcp http Apache httpd 2.4.7 (Ubuntu)', '31337/tcp tcpwrapped', '22/tcp ssh OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 Ubuntu Linux; protocol 2.0']}}</pre>
+
+<p><i>For authorized and educational assessments only.</i></p>
+</body>
+</html>

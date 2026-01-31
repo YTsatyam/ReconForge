@@ -1,0 +1,6 @@
+venv/
+pycache/
+*.pyc
+data/scans/
+*.log
+.env

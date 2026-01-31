@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Exposure Assessment Report</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .high { color: red; }
+        .medium { color: orange; }
+        .low { color: green; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+    </style>
+</head>
+<body>
+<h1>Exposure & Attack Surface Report</h1>
+
+<p><b>Target:</b> 127.0.0.1</p>
+<p><b>Date:</b> 2026-01-31 11:54:33.493681</p>
+
+<h2>Discovered Services</h2>
+
+<h3>127.0.0.1</h3>
+<ul>
+
+<li>135/tcp  open  msrpc         Microsoft Windows RPC</li>
+
+<li>445/tcp  open  microsoft-ds?</li>
+
+<li>5009/tcp open  http          Node.js Express framework</li>
+
+</ul>
+
+
+<h2>Risk Summary</h2>
+<table>
+<tr><th>Host</th><th>Risk</th><th>Score</th><th>Reasons</th></tr>
+
+<tr>
+<td>127.0.0.1</td>
+<td class="low">Low</td>
+<td>2</td>
+<td>HTTP service exposed (web attack surface)</td>
+</tr>
+
+</table>
+
+<h2>Change Detection</h2>
+<pre>{'new_hosts': [], 'removed_hosts': [], 'new_services': {}}</pre>
+
+<p><i>For authorized and educational assessments only.</i></p>
+</body>
+</html>
